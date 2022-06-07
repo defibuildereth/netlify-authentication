@@ -38,6 +38,7 @@ exports.handler = async (event, context) => {
     const { allowedRoles } = content[type];
 
     if (!roles || !roles.some((role) => allowedRoles.includes(role))) {
+        console.log('HELLO')
         return {
             statusCode: 402,
             body: JSON.stringify({
