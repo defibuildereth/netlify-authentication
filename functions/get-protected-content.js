@@ -31,6 +31,7 @@ const content = {
 };
 
 exports.handler = async (event, context) => {
+    console.log(event, context)
     const { type } = JSON.parse(event.body);
     const { user } = context.clientContext;
     const roles = user ? user.app_metadata.roles : false;
